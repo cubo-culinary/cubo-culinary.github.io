@@ -70,5 +70,6 @@ Use the existing classes (`.eyebrow`, `.btn`, `.link-arrow`, `.row`, spacing uti
 
 - [ ] Replace photography with Cubo's own, starting with Michelle's portrait (`images/michelle.jpg`)
 - [ ] Replace placeholder text marked `<!-- EDIT -->`: Michelle's story, the sample menu dishes, journal posts
+- [ ] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
 - [ ] Connect the enquiry form and newsletter to a real service
 - [ ] Confirm the email address, Instagram/TikTok handles and pricing
