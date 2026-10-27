@@ -1,0 +1,10 @@
+# macOS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Design tooling caches
+.impeccable/hook.cache.json
+.taste-skill/
