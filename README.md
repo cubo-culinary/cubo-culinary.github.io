@@ -36,7 +36,7 @@ The header and footer are copied into every page, so a change to either must be 
 
 ```
 css/style.css   all styles
-js/main.js      header on scroll, mobile menu, scroll reveal, gallery filters and viewer, enquiry and newsletter forms
+js/main.js      header on scroll, mobile menu, scroll reveal, gallery filters and viewer, enquiry form
 images/         photography, logos, favicon
 ```
 
@@ -71,11 +71,11 @@ Use the existing classes (`.eyebrow`, `.btn`, `.link-arrow`, `.row`, spacing uti
 - [ ] Replace photography with Cubo's own, starting with Michelle's portrait (`images/michelle.jpg`)
 - [ ] Replace placeholder text marked `<!-- EDIT -->`: Michelle's story, the sample menu dishes, journal posts
 - [ ] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
-- [ ] Connect the enquiry form and newsletter to a real service
+- [ ] Connect the enquiry form to a real service
 - [ ] Confirm the email address, Instagram/TikTok handles and pricing
 
 ## To do
 
 - [ ] Consider adding testimonials or partners to the home page (real ones only)
 - [ ] Build out the Journal page (`journal.html`, currently unlinked)
-- [ ] Rework the "Cubo Field Notes" footer section to promote Cubo's socials instead of the newsletter, including the Cubo Field Notes Instagram (behind the scenes, etc.)
+- [ ] Add the TikTok link to the footer once the account is active

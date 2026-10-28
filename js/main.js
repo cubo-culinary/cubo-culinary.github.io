@@ -92,13 +92,4 @@
       location.href = 'mailto:info.cubo.au@gmail.com?subject=' + encodeURIComponent('Cubo enquiry — ' + (f.get('type') || 'General')) + '&body=' + encodeURIComponent(lines.join('\n'));
     });
   }
-
-  /* Newsletter signup (same note as above) */
-  d.querySelectorAll('.signup').forEach(function (s) {
-    s.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var v = s.querySelector('input').value;
-      if (v) location.href = 'mailto:info.cubo.au@gmail.com?subject=' + encodeURIComponent('Cubo Field Notes — sign me up') + '&body=' + encodeURIComponent(v);
-    });
-  });
 })();
