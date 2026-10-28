@@ -87,7 +87,8 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var f = new FormData(form), lines = [];
-      ['name', 'email', 'phone', 'etype', 'date', 'location', 'guests', 'budget', 'type', 'diet', 'message', 'extra'].forEach(function (k) { if (f.get(k)) lines.push(k.charAt(0).toUpperCase() + k.slice(1) + ': ' + f.get(k)); });
+      // label the email lines with the visible field labels (text before any "required" marker)
+      [].forEach.call(form.querySelectorAll('[name]'), function (el) { if (el.value) lines.push(form.querySelector('label[for="' + el.id + '"]').firstChild.textContent.trim() + ': ' + el.value); });
       location.href = 'mailto:info.cubo.au@gmail.com?subject=' + encodeURIComponent('Cubo enquiry — ' + (f.get('type') || 'General')) + '&body=' + encodeURIComponent(lines.join('\n'));
     });
   }

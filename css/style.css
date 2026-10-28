@@ -340,15 +340,13 @@ section { position: relative; }
   color: var(--ivory); font: 300 var(--fs-body) var(--sans); padding: 12px 0; border-radius: 0; outline: 0; transition: border-color .3s;
 }
 .field textarea { min-height: 120px; resize: vertical; }
-.field textarea.short { min-height: 90px; }
-.field select option { color: #111; }
+.field select { color-scheme: dark; }
+.field .req { margin-left: 8px; text-transform: none; letter-spacing: .02em; opacity: .7; }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--sienna-light); }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(40px, 7vw, 110px); }
 .contact-info .k { font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; color: var(--sienna-light); display: block; margin-bottom: 4px; }
 .contact-info .blk { margin-bottom: 28px; }
-.not-sure { margin-top: 34px; padding: 26px 28px; border-left: 1px solid var(--sienna); background: rgba(244,239,230,.04); font-family: var(--serif); font-size: var(--fs-md); line-height: 1.4; font-weight: 300; }
-.not-sure strong { font-weight: 400; }
-@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .form { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } .form { grid-template-columns: 1fr; order: -1; } }
 
 /* Footer */
 .site-footer { position: relative; background: #1a1814; border-top: 1px solid rgba(244,239,230,.1); overflow: hidden; }
