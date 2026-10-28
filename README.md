@@ -39,6 +39,8 @@ The header and footer are copied into every page, so a change to either must be 
 css/style.css   all styles
 js/main.js      header on scroll, mobile menu, scroll reveal, gallery filters and viewer, enquiry form
 images/         photography, logos, favicon
+404.html        page GitHub Pages shows for broken links (uses root-relative paths)
+llms.txt        plain-text summary of Cubo for AI tools
 ```
 
 ## Design system
@@ -80,3 +82,18 @@ Use the existing classes (`.eyebrow`, `.btn`, `.link-arrow`, `.row`, spacing uti
 - [ ] Consider adding testimonials or partners (real ones only) to the home page and the Work with us page
 - [ ] Build out the Journal page (`journal.html`, currently unlinked)
 - [ ] Add the TikTok link to the footer once the account is active
+
+## Once the domain is confirmed
+
+- [ ] Add `robots.txt` and `sitemap.xml` (public pages only, not the Journal or 404)
+- [ ] Add a canonical link to every page
+- [ ] Add Open Graph and Twitter Card tags, with a 1200×630 preview image
+- [ ] Add structured data (JSON-LD) on the home page: business name, founder, Melbourne and Victoria service area, email, both Instagram accounts
+- [ ] Use full URLs in `llms.txt`
+
+## Off-site
+
+- [ ] Set up a Google Business Profile as a service-area business (Melbourne and Victoria)
+- [ ] Keep the name, email and website link the same across both Instagram bios and the Google profile
+- [ ] Add an FAQ once the answers are confirmed: minimum guests, travel area, booking lead time, dietary needs, pricing
+- [ ] Collect real reviews on Google, to use as testimonials
