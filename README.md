@@ -79,7 +79,6 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 | `bark-800.webp` | Home collage | [Jude Infantini](https://unsplash.com/photos/mI-QcAP95Ok) |
 | `water-2880.webp`, `water-1000.webp` | Gallery header and gallery | [Sven van der Pluijm](https://unsplash.com/photos/52J7km2qTjk) |
 | `wattle-800.webp` | Home collage, Journal tile | [E Hillsley](https://unsplash.com/photos/Dg_nlS2dDME) |
-| `eucalyptus-leaves-1200.webp` | Footer on every page | [Josefin](https://unsplash.com/photos/dIEa0BytZ_g) |
 
 ## Before launch
 
