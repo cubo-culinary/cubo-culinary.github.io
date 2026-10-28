@@ -11,6 +11,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="css/style.css">
+<link rel="preload" as="image" href="images/hero.jpg" fetchpriority="high">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -19,7 +20,7 @@
   <nav class="nav" aria-label="Main"><ul><li><a href="about.html">About</a></li><li><a href="experiences.html">Experiences</a></li><li><a href="gallery.html">Gallery</a></li><li><a href="collaborate.html">Work with us</a></li><li><a class="nav-cta" href="enquire.html">Enquire</a></li></ul></nav>
   <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
 </header>
-<main id="main">
+<main id="main" tabindex="-1">
 
 <section class="hero">
   <div class="hero-img" style="background-image:url('images/hero.jpg')" role="img" aria-label="A hand placing foraged flowers and herbs on a plated dish"></div>
@@ -35,9 +36,9 @@
 <section class="philosophy light paper">
   <div class="wrap phil-grid">
     <div class="collage rv" aria-hidden="true">
-      <img class="a" src="images/landscape.jpg" alt="">
-      <img class="b" src="images/wattle.jpg" alt="">
-      <img class="c" src="images/bark.jpg" alt="">
+      <img class="a" src="images/landscape.jpg" alt="" loading="lazy">
+      <img class="b" src="images/wattle.jpg" alt="" loading="lazy">
+      <img class="c" src="images/bark.jpg" alt="" loading="lazy">
     </div>
     <div class="phil-text rv d1">
       <h2>Australian Terroir × Asian Heritage</h2>

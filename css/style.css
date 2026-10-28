@@ -51,7 +51,9 @@ ul { list-style: none; margin: 0; padding: 0; }
 h1, h2, h3, h4 { font-family: var(--serif); font-weight: 300; line-height: 1.12; margin: 0; letter-spacing: .005em; }
 p { margin: 0 0 1.2em; }
 ::selection { background: var(--sienna); color: var(--ivory); }
-:focus-visible { outline: 1px solid var(--sienna-light); outline-offset: 4px; }
+:focus-visible { outline: 2px solid var(--sienna-light); outline-offset: 4px; }
+.light :focus-visible { outline-color: var(--sienna); }
+main:focus { outline: none; }
 
 .wrap { width: 100%; max-width: calc(var(--max) + var(--gutter) * 2); margin: 0 auto; padding: 0 var(--gutter); }
 .skip { position: absolute; left: -999px; top: 0; background: var(--ivory); color: var(--charcoal); padding: 10px 16px; z-index: 200; }
@@ -128,9 +130,10 @@ p { margin: 0 0 1.2em; }
   .menu-toggle { display: block; }
   .nav {
     position: fixed; inset: 0; background: var(--charcoal); display: flex; align-items: center; justify-content: center;
-    opacity: 0; pointer-events: none; transition: opacity .5s var(--ease); z-index: -1;
+    opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .5s var(--ease), visibility 0s .5s; z-index: -1;
   }
-  .menu-open .nav { opacity: 1; pointer-events: auto; }
+  /* visibility keeps the closed menu's links out of the keyboard order */
+  .menu-open .nav { opacity: 1; visibility: visible; pointer-events: auto; transition: opacity .5s var(--ease); }
   .nav ul { flex-direction: column; align-items: center; gap: 8px; }
   .nav a { font-family: var(--serif); font-size: var(--fs-lg); letter-spacing: .04em; text-transform: none; font-weight: 300; }
   /* In the menu overlay, Enquire matches the site's .btn instead of a boxed serif link */
@@ -356,6 +359,7 @@ section { position: relative; }
 .field select { color-scheme: dark; }
 .field .req { margin-left: 8px; text-transform: none; letter-spacing: .02em; opacity: .7; }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--sienna-light); }
+.field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--sienna-light); outline-offset: 4px; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(40px, 7vw, 110px); }
 .contact-info .k { font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; color: var(--sienna-light); display: block; margin-bottom: 4px; }
 .contact-info .blk { margin-bottom: 28px; }
@@ -377,8 +381,8 @@ section { position: relative; }
 .ig-links span { display: block; font-family: var(--serif); font-size: var(--fs-md); }
 .ig-links small { display: block; margin-top: 2px; font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; opacity: .6; }
 .foot-links { display: flex; gap: 36px; border-left: 1px solid rgba(244,239,230,.18); padding-left: clamp(20px, 3vw, 44px); }
-.foot-links ul { display: grid; gap: 4px; }
-.foot-links a { font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; opacity: .78; transition: opacity .3s; }
+.foot-links ul { display: grid; gap: 0; }
+.foot-links a { display: inline-block; padding-block: 4px; font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; opacity: .78; transition: opacity .3s; }
 .foot-links a:hover { opacity: 1; color: var(--sienna-light); }
 .foot-bottom { border-top: 1px solid rgba(244,239,230,.25); padding-top: 28px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
 .foot-bottom .loc { font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; opacity: .7; }
