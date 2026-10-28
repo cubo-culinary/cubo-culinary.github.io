@@ -7,7 +7,6 @@
 
 :root {
   --ivory: #F4EFE6;
-  --ivory-deep: #E8E1D4;
   --charcoal: #1C1B18;
   --charcoal-soft: #26241F;
   --sienna: #A94F36;
@@ -237,7 +236,7 @@ section { position: relative; }
 
 /* Split rows (experiences, about) */
 .row { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(36px, 7vw, 120px); align-items: center; padding-block: clamp(50px, 6vw, 90px); }
-.row.plain { border: 0; padding-block: 0; }
+.row.plain { border: 0; padding-block: 0; grid-template-columns: 5fr 7fr; }
 .row + .row { border-top: 1px solid rgba(244,239,230,.12); }
 .row.flip .row-img { order: 2; }
 .row-img { overflow: hidden; aspect-ratio: 4 / 4.6; position: relative; }
@@ -253,7 +252,7 @@ section { position: relative; }
 .row.tall .row-img { position: sticky; top: 110px; }
 .row-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 64px clamp(36px, 5vw, 80px); padding-block: clamp(50px, 6vw, 90px); border-top: 1px solid rgba(244,239,230,.12); }
 .row-pair .row-img { aspect-ratio: 4 / 3; margin-bottom: 32px; }
-@media (max-width: 860px) { .row, .row-pair { grid-template-columns: 1fr; } .row.flip .row-img { order: 0; } .row-img { aspect-ratio: 4/3; } .row.tall .row-img { position: relative; top: 0; } }
+@media (max-width: 860px) { .row, .row.plain, .row-pair { grid-template-columns: 1fr; } .row.flip .row-img { order: 0; } .row-img { aspect-ratio: 4/3; } .row.tall .row-img { position: relative; top: 0; } }
 
 .tiers { margin: 34px 0 8px; border-top: 1px solid rgba(244,239,230,.16); }
 .tier { padding: 22px 0; border-bottom: 1px solid rgba(244,239,230,.16); display: grid; grid-template-columns: 1fr auto; gap: 6px 24px; }
@@ -320,7 +319,7 @@ section { position: relative; }
 .post p { line-height: 1.8; opacity: .88; }
 .post h2 { font-size: var(--fs-lg); margin: 56px 0 16px; }
 .post figure { margin: 48px 0; }
-.post figure img { width: 100%; }
+.post figure img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .post figcaption { margin-top: 12px; font-size: var(--fs-sm); opacity: .65; }
 .post blockquote { margin: 48px 0; padding-left: 28px; border-left: 1px solid var(--sienna-light); font-family: var(--serif); font-style: italic; font-size: var(--fs-md); line-height: 1.45; }
 .post .check-list { margin-bottom: 24px; }
