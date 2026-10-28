@@ -69,6 +69,18 @@ Everything is defined at the top of `css/style.css` in `:root`.
 
 Use the existing classes (`.eyebrow`, `.btn`, `.link-arrow`, `.row`, spacing utilities such as `.pt-s` and `.mt-m`) rather than inline styles. The one inline style kept on purpose is a section's background image, set as `style="--bg:url('../images/…')"`.
 
+## Photo credits
+
+Stock photos from [Unsplash](https://unsplash.com/license), free to use without attribution; listed here so their source is on record.
+
+| File | Used for | Photographer |
+|---|---|---|
+| `bush-2880.webp`, `bush-1000.webp` | About and sample post headers, home collage, gallery | [Mitchell Luo](https://unsplash.com/photos/Cip_dNOVI0A) |
+| `bark-800.webp` | Home collage | [Jude Infantini](https://unsplash.com/photos/mI-QcAP95Ok) |
+| `water-2880.webp`, `water-1000.webp` | Gallery header and gallery | [Sven van der Pluijm](https://unsplash.com/photos/52J7km2qTjk) |
+| `wattle-800.webp` | Home collage, Journal tile | [E Hillsley](https://unsplash.com/photos/Dg_nlS2dDME) |
+| `eucalyptus-leaves-1200.webp` | Footer on every page | [Josefin](https://unsplash.com/photos/dIEa0BytZ_g) |
+
 ## Before launch
 
 - [x] Michelle's portrait (`images/michelle-portrait-*.webp`, from `michelle_portrait.jpg`)
