@@ -73,3 +73,9 @@ Use the existing classes (`.eyebrow`, `.btn`, `.link-arrow`, `.row`, spacing uti
 - [ ] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
 - [ ] Connect the enquiry form and newsletter to a real service
 - [ ] Confirm the email address, Instagram/TikTok handles and pricing
+
+## To do
+
+- [ ] Consider adding testimonials or partners to the home page (real ones only)
+- [ ] Build out the Journal page (`journal.html`, currently unlinked)
+- [ ] Rework the "Cubo Field Notes" footer section to promote Cubo's socials instead of the newsletter, including the Cubo Field Notes Instagram (behind the scenes, etc.)
