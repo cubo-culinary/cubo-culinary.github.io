@@ -319,6 +319,9 @@ section { position: relative; }
 .light .check-list li { border-bottom-color: rgba(28,27,24,.16); }
 .check-list li::before { content: ""; width: 6px; height: 6px; background: var(--sienna); flex: none; transform: translateY(-2px); }
 @media (max-width: 700px) { .check-list { columns: 1; } }
+.cons-groups { display: grid; grid-template-columns: repeat(3, 1fr); gap: 32px clamp(30px, 4vw, 60px); margin-top: 56px; }
+.cons-groups h3 { font-size: var(--fs-md); margin-bottom: 8px; }
+@media (max-width: 860px) { .cons-groups { grid-template-columns: 1fr; } }
 
 /* CTA band */
 .cta { padding: clamp(72px, 8vw, 112px) 0; }
