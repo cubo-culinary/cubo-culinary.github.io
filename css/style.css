@@ -306,12 +306,25 @@ section { position: relative; }
 .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 18px; }
 .tile { aspect-ratio: 1; padding: 28px; display: flex; flex-direction: column; justify-content: space-between; position: relative; overflow: hidden; transition: transform .6s var(--ease); }
 .tile:hover { transform: translateY(-4px); }
-.tile small { font-size: var(--fs-sm); letter-spacing: .22em; text-transform: uppercase; opacity: .75; }
+.tile small { font-size: var(--fs-sm); letter-spacing: .22em; text-transform: uppercase; }
 .tile h2 { font-size: var(--fs-md); line-height: 1.15; }
 .tile.s { background: var(--sienna); } .tile.o { background: var(--olive); } .tile.b { background: var(--blue); color: var(--charcoal); } .tile.c { background: #2c2a25; } .tile.i { background: var(--ivory); color: var(--charcoal); }
 .tile.img { background: var(--bg) center/cover; }
 .tile.img::before { content: ""; position: absolute; inset: 0; background: linear-gradient(transparent 30%, rgba(14,13,11,.85)); }
 .tile.img > * { position: relative; }
+/* Journal post */
+.post-meta { font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; opacity: .8; margin-bottom: 18px; }
+.post-meta i { font-style: normal; margin: 0 .6em; opacity: .5; }
+.post-by { margin-top: 18px; font-size: var(--fs-sm); letter-spacing: .02em; opacity: .75; }
+.post, .post-head { max-width: calc(680px + var(--gutter) * 2); }
+.post p { line-height: 1.8; opacity: .88; }
+.post h2 { font-size: var(--fs-lg); margin: 56px 0 16px; }
+.post figure { margin: 48px 0; }
+.post figure img { width: 100%; }
+.post figcaption { margin-top: 12px; font-size: var(--fs-sm); opacity: .65; }
+.post blockquote { margin: 48px 0; padding-left: 28px; border-left: 1px solid var(--sienna-light); font-family: var(--serif); font-style: italic; font-size: var(--fs-md); line-height: 1.45; }
+.post .check-list { margin-bottom: 24px; }
+.post-end { margin-top: 64px; padding-top: 28px; border-top: 1px solid rgba(244,239,230,.15); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px 32px; }
 
 /* Lists */
 .check-list { columns: 2; column-gap: 50px; margin: 28px 0 0; }

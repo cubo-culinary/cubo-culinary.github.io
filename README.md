@@ -29,6 +29,7 @@ Upload the whole folder to any static host (GitHub Pages, Netlify, cPanel…). T
 | `collaborate.html` | Work with us: collaborations and consulting (`#consulting`) |
 | `enquire.html` | Enquiry form ("Plan your gathering") |
 | `journal.html` | Kept but not linked from the nav until there are posts |
+| `journal-post.html` | Sample layout for a single Journal post (copy per story; `noindex`) |
 
 The header and footer are copied into every page, so a change to either must be made in each HTML file.
 
@@ -76,6 +77,6 @@ Use the existing classes (`.eyebrow`, `.btn`, `.link-arrow`, `.row`, spacing uti
 
 ## To do
 
-- [ ] Consider adding testimonials or partners to the home page (real ones only)
+- [ ] Consider adding testimonials or partners (real ones only) to the home page and the Work with us page
 - [ ] Build out the Journal page (`journal.html`, currently unlinked)
 - [ ] Add the TikTok link to the footer once the account is active
