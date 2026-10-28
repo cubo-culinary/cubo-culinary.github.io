@@ -11,7 +11,7 @@
   --charcoal: #1C1B18;
   --charcoal-soft: #26241F;
   --sienna: #A94F36;
-  --sienna-light: #C26A4E;
+  --sienna-light: #CA7759;
   --blue: #8FA5A8;
   --olive: #6B6F4A;
   --olive-deep: #4A4D33;
@@ -85,6 +85,8 @@ p { margin: 0 0 1.2em; }
 .link-arrow svg { width: 18px; height: 10px; transition: transform .4s var(--ease); }
 .link-arrow:hover { gap: 20px; border-color: currentColor; }
 .link-arrow + .link-arrow { margin-left: 28px; }
+.link-row { display: flex; flex-wrap: wrap; gap: 12px 28px; }
+.link-row .link-arrow + .link-arrow { margin-left: 0; }
 
 .btn {
   display: inline-block; padding: 16px 34px; font-size: var(--fs-sm); letter-spacing: .22em; text-transform: uppercase;
@@ -168,6 +170,9 @@ p { margin: 0 0 1.2em; }
 .page-hero .wrap { position: relative; z-index: 2; }
 .page-hero h1 { max-width: 900px; }
 .page-hero p.lede { max-width: 620px; margin-top: 26px; }
+.jump { display: flex; flex-wrap: wrap; gap: 0 28px; margin-top: 32px; }
+.jump a { padding-block: 8px; font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; opacity: .75; transition: opacity .3s; }
+.jump a:hover { opacity: 1; }
 
 /* ---------- Sections ---------- */
 section { position: relative; }
@@ -203,7 +208,7 @@ section { position: relative; }
 /* Experiences strip (home) */
 .exp-grid { display: grid; gap: clamp(36px, 4vw, 56px); }
 .exp-head { display: grid; grid-template-columns: 1fr 1fr; gap: 24px clamp(30px, 5vw, 80px); align-items: end; }
-.exp-head p { margin: 0; }
+.exp-head :where(p) { margin: 0; }
 @media (max-width: 860px) { .exp-head { grid-template-columns: 1fr; } }
 .exp-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: clamp(14px, 1.6vw, 26px); }
 .card { display: block; }
@@ -236,18 +241,25 @@ section { position: relative; }
 .row.flip .row-img { order: 2; }
 .row-img { overflow: hidden; aspect-ratio: 4 / 4.6; position: relative; }
 .row-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.6s var(--ease); }
-.row:hover .row-img img { transform: scale(1.03); }
+.row:hover .row-img img, .row-pair article:hover .row-img img { transform: scale(1.03); }
 .row-img.sq { aspect-ratio: 1; }
-.row h2 { font-size: var(--fs-lg); margin-bottom: 10px; }
-.row .tagline { font-family: var(--serif); font-style: italic; font-size: var(--fs-md); line-height: 1.45; opacity: .92; margin-bottom: 22px; }
-.row p { opacity: .8; }
-@media (max-width: 860px) { .row { grid-template-columns: 1fr; } .row.flip .row-img { order: 0; } .row-img { aspect-ratio: 4/3; } }
+.row h2, .row-pair h2 { font-size: var(--fs-lg); margin-bottom: 10px; }
+.row .tagline, .row-pair .tagline { font-family: var(--serif); font-style: italic; font-size: var(--fs-md); line-height: 1.45; opacity: .92; margin-bottom: 22px; }
+.row p, .row-pair p { opacity: .8; }
+.row .note { font-size: var(--fs-body); }
+/* long sections: photo stays in view while the option list scrolls */
+.row.tall { align-items: start; }
+.row.tall .row-img { position: sticky; top: 110px; }
+.row-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 64px clamp(36px, 5vw, 80px); padding-block: clamp(50px, 6vw, 90px); border-top: 1px solid rgba(244,239,230,.12); }
+.row-pair .row-img { aspect-ratio: 4 / 3; margin-bottom: 32px; }
+@media (max-width: 860px) { .row, .row-pair { grid-template-columns: 1fr; } .row.flip .row-img { order: 0; } .row-img { aspect-ratio: 4/3; } .row.tall .row-img { position: relative; top: 0; } }
 
 .tiers { margin: 34px 0 8px; border-top: 1px solid rgba(244,239,230,.16); }
 .tier { padding: 22px 0; border-bottom: 1px solid rgba(244,239,230,.16); display: grid; grid-template-columns: 1fr auto; gap: 6px 24px; }
 .tier h3 { font-size: var(--fs-md); }
 .tier .meta { font-size: var(--fs-sm); letter-spacing: .18em; text-transform: uppercase; color: var(--sienna-light); align-self: center; text-align: right; font-weight: 400; }
 .tier p { grid-column: 1 / -1; margin: 0; opacity: .72; line-height: 1.65; }
+@media (max-width: 560px) { .tier { grid-template-columns: 1fr; } .tier .meta { text-align: left; } }
 
 /* Pillars list (about) */
 .pillar-list { display: grid; gap: 0; border-top: 1px solid rgba(28,27,24,.18); }
