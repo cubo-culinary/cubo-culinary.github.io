@@ -8,6 +8,3 @@
 # Design tooling caches
 .impeccable/hook.cache.json
 .taste-skill/
-
-# Original photo sources (kept locally; the site uses the exported WebP files)
-images/michelle_portrait.jpg
