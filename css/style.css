@@ -259,7 +259,7 @@ section { position: relative; }
 
 .tiers { margin: 34px 0 8px; border-top: 1px solid rgba(244,239,230,.16); }
 .tier { padding: 22px 0; border-bottom: 1px solid rgba(244,239,230,.16); display: grid; grid-template-columns: 1fr auto; gap: 6px 24px; }
-.tier h3 { font-size: var(--fs-md); }
+.tier h3, .tier h4 { font-size: var(--fs-md); }
 .tier .meta { font-size: var(--fs-sm); letter-spacing: .18em; text-transform: uppercase; color: var(--sienna-light); align-self: center; text-align: right; font-weight: 400; }
 .tier p { grid-column: 1 / -1; margin: 0; opacity: .72; line-height: 1.65; }
 @media (max-width: 560px) { .tier { grid-template-columns: 1fr; } .tier .meta { text-align: left; } }
