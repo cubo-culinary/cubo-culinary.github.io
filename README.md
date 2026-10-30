@@ -1,6 +1,6 @@
 # Cubo
 
-Website for **Cubo**, private dining, wilderness feasts, bespoke gatherings and events in Melbourne, Victoria: Australian terroir × Asian heritage.
+Website for **Cubo**, private dining, wilderness feasts and events in Melbourne, Victoria: Australian terroir × Asian heritage.
 
 Plain HTML, CSS and JavaScript. No build step, no dependencies beyond Google Fonts.
 
@@ -24,7 +24,7 @@ Upload the whole folder to any static host (GitHub Pages, Netlify, cPanel…). T
 |---|---|
 | `index.html` | Home |
 | `about.html` | About Cubo, philosophy, Meet Michelle (`#michelle`) |
-| `experiences.html` | Private dining, wilderness feasts, bespoke gatherings, events, sample menu |
+| `experiences.html` | Private dining, wilderness feasts, events (bespoke and shared), sample menu |
 | `gallery.html` | Filterable photo gallery with a full-screen viewer |
 | `collaborate.html` | Work with us: collaborations and consulting (`#consulting`) |
 | `enquire.html` | Enquiry form ("Plan your gathering") |
