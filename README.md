@@ -24,7 +24,7 @@ Upload the whole folder to any static host (GitHub Pages, Netlify, cPanel…). T
 |---|---|
 | `index.html` | Home |
 | `about.html` | About Cubo, philosophy, Meet Michelle (`#michelle`) |
-| `experiences.html` | Private chef, private dining, wilderness feasts, bespoke gatherings, events, sample menu |
+| `experiences.html` | Private dining, wilderness feasts, bespoke gatherings, events, sample menu |
 | `gallery.html` | Filterable photo gallery with a full-screen viewer |
 | `collaborate.html` | Work with us: collaborations and consulting (`#consulting`) |
 | `enquire.html` | Enquiry form ("Plan your gathering") |
