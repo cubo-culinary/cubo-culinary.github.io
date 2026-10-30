@@ -1,6 +1,6 @@
 # Cubo
 
-Website for **Cubo**, private dining, wilderness feasts and events in Melbourne, Victoria: Australian terroir × Asian heritage.
+Website for **Cubo**, private dining, wilderness feasts, bespoke gatherings and events in Melbourne, Victoria: Australian terroir × Asian heritage.
 
 Plain HTML, CSS and JavaScript. No build step, no dependencies beyond Google Fonts.
 
