@@ -92,6 +92,7 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 ## To do
 
 - [ ] Consider adding testimonials or partners (real ones only) to the home page and the Work with us page
+  - Partners to add: Plated Narratives, Alkira
 - [ ] Build out the Journal page (`journal.html`, currently unlinked)
 - [ ] Add the TikTok link to the footer once the account is active
 

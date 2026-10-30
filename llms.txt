@@ -1,6 +1,6 @@
 # Cubo
 
-> Cubo is a private dining and events business based in Melbourne, Victoria, Australia, founded by chef Michelle Agustin. It cooks seasonal Australian produce in a way rooted in the flavours, techniques and traditions of Asia: not a fusion, but a meeting of cultures. The name comes from the kubo, the simple Filipino hut where people gather, close to nature.
+> Cubo is a private dining and events business based in Melbourne, Victoria, Australia, led by chef Michelle Agustin. It cooks seasonal Australian produce in a way rooted in the flavours, techniques and traditions of Asia: not a fusion, but a meeting of cultures. The name comes from the kubo, the simple Filipino hut where people gather, close to nature.
 
 Cubo travels across Melbourne and Victoria for private dinners, supper clubs, wilderness feasts and events. Enquiries go to cuboculinary@gmail.com or through the enquiry page.
 
@@ -18,7 +18,7 @@ Cubo travels across Melbourne and Victoria for private dinners, supper clubs, wi
 
 ## About
 
-- [About Cubo and Michelle Agustin](/about.html): philosophy (seasonal and local, Asian heritage, nature and culture, no waste) and the founder.
+- [About Cubo and Michelle Agustin](/about.html): philosophy (seasonal and local, Asian heritage, nature and culture, no waste) and the chef behind it.
 - [Enquire](/enquire.html): plan a gathering.
 
 ## Optional
