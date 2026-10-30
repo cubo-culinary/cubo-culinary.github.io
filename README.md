@@ -33,6 +33,8 @@ Upload the whole folder to any static host (GitHub Pages, Netlify, cPanel…). T
 
 The header and footer are copied into every page, so a change to either must be made in each HTML file.
 
+After changing `css/style.css`, raise the `?v=` number on its link in every page so browsers fetch the new file instead of a cached one.
+
 ## Structure
 
 ```

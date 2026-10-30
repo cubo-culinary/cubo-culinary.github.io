@@ -378,7 +378,8 @@ section { position: relative; }
 .ig-links { display: grid; gap: 14px; }
 .ig-links a { display: block; padding-bottom: 12px; border-bottom: 1px solid rgba(244,239,230,.25); transition: border-color .3s; }
 .ig-links a:hover { border-bottom-color: var(--sienna-light); }
-.ig-links span { display: block; font-family: var(--serif); font-size: var(--fs-md); }
+.ig-links span { display: flex; align-items: center; gap: 12px; font-family: var(--serif); font-size: var(--fs-md); }
+.ig-icon { width: 20px; height: 20px; flex: none; opacity: .8; }
 .ig-links small { display: block; margin-top: 2px; font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; opacity: .6; }
 .foot-links { display: flex; gap: 36px; border-left: 1px solid rgba(244,239,230,.18); padding-left: clamp(20px, 3vw, 44px); }
 .foot-links ul { display: grid; gap: 0; }
