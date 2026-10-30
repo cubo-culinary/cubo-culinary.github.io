@@ -6,17 +6,17 @@ Plain HTML, CSS and JavaScript. No build step, no dependencies beyond Google Fon
 
 ## Run locally
 
-Open `index.html` in a browser, or serve the folder so links and fonts behave as they will online:
+Links between pages leave out `.html` (`/about`, not `/about.html`), so opening the files directly or using `python3 -m http.server` breaks navigation. Use the included server, which resolves those routes and shows `404.html` for missing pages, as GitHub Pages does:
 
 ```bash
-python3 -m http.server 8000
+python3 serve.py
 ```
 
 Then visit <http://localhost:8000>.
 
 ## Deploy
 
-Upload the whole folder to any static host (GitHub Pages, Netlify, cPanel…). The repository is named `cubo-culinary.github.io`, so with GitHub Pages enabled on `main` it is served at <https://cubo-culinary.github.io>.
+Upload the whole folder to a static host that serves `about.html` at `/about`. GitHub Pages and Netlify do this by default; on other hosts, check before switching. The repository is named `cubo-culinary.github.io`, so with GitHub Pages enabled on `main` it is served at <https://cubo-culinary.github.io>.
 
 ## Pages
 
@@ -43,6 +43,7 @@ js/main.js      header on scroll, mobile menu, scroll reveal, gallery filters an
 images/         photography, logos, favicon
 404.html        page GitHub Pages shows for broken links (uses root-relative paths)
 llms.txt        plain-text summary of Cubo for AI tools
+serve.py        local preview server with clean URLs
 ```
 
 ## Design system
@@ -101,7 +102,7 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 ## Once the domain is confirmed
 
 - [ ] Add `robots.txt` and `sitemap.xml` (public pages only, not the Journal or 404)
-- [ ] Add a canonical link to every page
+- [ ] Add a canonical link to every page, using the clean URL (`/about`, not `/about.html`), since GitHub Pages serves both
 - [ ] Add Open Graph and Twitter Card tags, with a 1200×630 preview image
 - [ ] Add structured data (JSON-LD) on the home page: business name, founder, Melbourne and Victoria service area, email, both Instagram accounts
 - [ ] Use full URLs in `llms.txt`

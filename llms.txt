@@ -6,21 +6,21 @@ Cubo travels across Melbourne and Victoria for private dining, wilderness feasts
 
 ## Experiences
 
-- [Private Dining](/experiences.html#private-dining): seasonal menus of 3 to 6 individually plated courses, for intimate groups and larger gatherings. A minimum spend applies to each booking.
-- [Wilderness Feasts](/experiences.html#wilderness): outdoor feasts cooked over fire and shared at a long table in natural settings. Private feasts are booked by a group, with two menus, from simplest to most immersive: Bush Camp Classics and Origins by Fire. Open feasts have a set menu and individual seats, with dates announced on Instagram (@cubo.private_dining).
-- [Events & Experiences](/experiences.html#events): bespoke menus and shared feasts for celebrations, weddings, corporate functions and brand events, from canapés to abundant shared tables.
+- [Private Dining](/experiences#private-dining): seasonal menus of 3 to 6 individually plated courses, for intimate groups and larger gatherings. A minimum spend applies to each booking.
+- [Wilderness Feasts](/experiences#wilderness): outdoor feasts cooked over fire and shared at a long table in natural settings. Private feasts are booked by a group, with two menus, from simplest to most immersive: Bush Camp Classics and Origins by Fire. Open feasts have a set menu and individual seats, with dates announced on Instagram (@cubo.private_dining).
+- [Events & Experiences](/experiences#events): bespoke menus and shared feasts for celebrations, weddings, corporate functions and brand events, from canapés to abundant shared tables.
 
 ## Work with Cubo
 
-- [Partnerships](/collaborate.html): collaborations with venues, wineries, farms, glamping sites, pop-ups, festivals and brands.
-- [Consulting](/collaborate.html#consulting): concept and menu development, kitchen operations, systems, training and restaurant opening support.
+- [Partnerships](/collaborate): collaborations with venues, wineries, farms, glamping sites, pop-ups, festivals and brands.
+- [Consulting](/collaborate#consulting): concept and menu development, kitchen operations, systems, training and restaurant opening support.
 
 ## About
 
-- [About Cubo and Michelle Agustin](/about.html): philosophy (seasonal and local, Asian heritage, nature and culture, no waste) and the chef behind it: Michelle Agustin, a Melbourne-based chef with Filipino roots and nearly 15 years of experience across cruise ships, five-star hotels in the USA, Australian restaurants including hatted ones, and Lume in Melbourne.
-- [Enquire](/enquire.html): plan a gathering.
+- [About Cubo and Michelle Agustin](/about): philosophy (seasonal and local, Asian heritage, nature and culture, no waste) and the chef behind it: Michelle Agustin, a Melbourne-based chef with Filipino roots and nearly 15 years of experience across cruise ships, five-star hotels in the USA, Australian restaurants including hatted ones, and Lume in Melbourne.
+- [Enquire](/enquire): plan a gathering.
 
 ## Optional
 
-- [Gallery](/gallery.html)
+- [Gallery](/gallery)
 - Instagram: [@cubo.private_dining](https://www.instagram.com/cubo.private_dining/) (dinners, feasts and events) and [@fieldnotesbycubo](https://www.instagram.com/fieldnotesbycubo/) (behind the scenes, foraging and recipes)
