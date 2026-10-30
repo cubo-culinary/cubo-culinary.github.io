@@ -86,8 +86,8 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 
 - [x] Michelle's portrait (`images/michelle-portrait-*.webp`, from `michelle_portrait.jpg`)
 - [ ] Replace the rest of the photography with Cubo's own
-- [ ] Replace placeholder text marked `<!-- EDIT -->`: Michelle's story, the sample menu dishes, journal posts
-- [ ] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
+- [ ] Replace placeholder text marked `<!-- EDIT -->`: the sample menu dishes, journal posts
+- [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
 - [ ] Connect the enquiry form to a real service
 - [ ] Confirm the email address, Instagram/TikTok handles and pricing
 
