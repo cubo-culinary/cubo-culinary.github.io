@@ -89,7 +89,7 @@
       var f = new FormData(form), lines = [];
       // label the email lines with the visible field labels (text before any "required" marker)
       [].forEach.call(form.querySelectorAll('[name]'), function (el) { if (el.value) lines.push(form.querySelector('label[for="' + el.id + '"]').firstChild.textContent.trim() + ': ' + el.value); });
-      location.href = 'mailto:info.cubo.au@gmail.com?subject=' + encodeURIComponent('Cubo enquiry — ' + (f.get('type') || 'General')) + '&body=' + encodeURIComponent(lines.join('\n'));
+      location.href = 'mailto:cuboculinary@gmail.com?subject=' + encodeURIComponent('Cubo enquiry — ' + (f.get('type') || 'General')) + '&body=' + encodeURIComponent(lines.join('\n'));
     });
   }
 })();
