@@ -28,8 +28,9 @@ Upload the whole folder to a static host that serves `about.html` at `/about`. G
 | `gallery.html` | Filterable photo gallery with a full-screen viewer |
 | `collaborate.html` | Work with us: collaborations and consulting (`#consulting`) |
 | `enquire.html` | Enquiry form ("Plan your gathering") |
-| `journal.html` | Kept but not linked from the nav until there are posts |
-| `journal-post.html` | Sample layout for a single Journal post (copy per story; `noindex`) |
+| `journal.html` | Journal: list of posts, newest first |
+| `things-that-inspire-the-way-we-cook.html` | First Journal post, by Michelle |
+| `journal-post.html` | Template for a new Journal post (not linked; `noindex`). Copy it, give the copy a short URL-style file name, drop the `noindex` line, add the canonical and share tags (as on the first post), then list it on `journal.html`, in `sitemap.xml` and in `llms.txt` |
 | `privacy.html` | Privacy policy, linked from the footer and the enquiry form |
 
 The header and footer are copied into every page, so a change to either must be made in each HTML file.
@@ -113,7 +114,8 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 
 - [x] Michelle's portrait (`images/michelle-portrait-*.webp`, from `michelle_portrait.jpg`)
 - [ ] Replace the rest of the photography with Cubo's own
-- [ ] Replace placeholder text marked `<!-- EDIT -->`: the sample menu dishes, journal posts
+- [ ] Replace placeholder text marked `<!-- EDIT -->`: the sample menu dishes
+- [ ] Add a photo to the first Journal post (marked `<!-- EDIT -->` in `things-that-inspire-the-way-we-cook.html`)
 - [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
 - [x] Connect the enquiry form to a real service (Web3Forms)
 - [ ] Review the Privacy page (`privacy.html`) and confirm it matches how Cubo handles enquiries
@@ -123,7 +125,8 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 
 - [ ] Consider adding testimonials or partners (real ones only) to the home page and the Work with us page
   - Partners to add: Plated Narratives, Alkira
-- [ ] Build out the Journal page (`journal.html`, currently unlinked)
+- [x] Publish the Journal with its first post
+- [ ] Once there are three Journal posts with photos, add a "From the Journal" section to the home page showing the latest three, just after Meet Michelle
 
 ## Domain: cuboculinary.com.au
 
