@@ -33,7 +33,22 @@ Upload the whole folder to a static host that serves `about.html` at `/about`. G
 
 The header and footer are copied into every page, so a change to either must be made in each HTML file.
 
-After changing `css/style.css`, raise the `?v=` number on its link in every page so browsers fetch the new file instead of a cached one.
+After changing `css/style.css` or `js/main.js`, raise the `?v=` number on its link in every page so browsers fetch the new file instead of a cached one.
+
+## Analytics
+
+[Umami Cloud](https://cloud.umami.is), cookieless, so no consent banner is needed. The script is in the `<head>` of every page and only counts visits on `cuboculinary.com.au` and `cubo-culinary.github.io`, not local previews. Besides page views, `js/main.js` records:
+
+| Event | When |
+|---|---|
+| `Enquiry sent` | The enquiry form opens the visitor's email app (not proof the email was sent), with the chosen experience and occasion |
+| `Enquire link` | Any link to the enquiry page, with the page and link text |
+| `Instagram link` | Any Instagram link |
+| `Email link` | The email address link |
+| `Email copied` | A Copy button next to the email address, with the page |
+| `Work with us link` | Any link to the Work with us page |
+
+Visitors with ad blockers are not counted, so treat the numbers as a lower bound.
 
 ## Structure
 

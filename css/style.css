@@ -390,6 +390,10 @@ section { position: relative; }
 .foot-bottom .loc i { font-style: normal; margin: 0 .6em; opacity: .5; }
 .foot-email { font-size: var(--fs-sm); letter-spacing: .02em; opacity: .7; transition: opacity .3s; }
 .foot-email:hover { opacity: 1; }
+.copy-btn { display: inline-flex; vertical-align: middle; margin: -14px -14px -14px -4px; padding: 14px; color: var(--sienna-light); background: none; border: 0; cursor: pointer; transition: color .3s; }
+.copy-btn:hover { color: var(--ivory); }
+.toast { position: fixed; left: 50%; bottom: 24px; z-index: 200; transform: translate(-50%, 12px); padding: 12px 20px; background: var(--ivory); color: var(--charcoal); font-size: var(--fs-sm); letter-spacing: .08em; opacity: 0; pointer-events: none; transition: opacity .3s var(--ease), transform .3s var(--ease); }
+.toast.show { opacity: 1; transform: translate(-50%, 0); }
 .foot-bottom .logo { width: clamp(84px, 7vw, 104px); background-image: url(../images/logo-ivory.png); opacity: .9; }
 .copy { max-width: none; width: 100%; font-size: var(--fs-sm); line-height: 1.7; text-align: center; padding: 30px var(--gutter) 34px; margin-top: 0; letter-spacing: .04em; border-top: 1px solid rgba(244,239,230,.12); background: var(--charcoal); color: rgba(244,239,230,.5); }
 .copy .ack { margin: 0 0 6px; color: rgba(244,239,230,.75); }

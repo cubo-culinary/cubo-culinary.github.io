@@ -89,7 +89,51 @@
       var f = new FormData(form), lines = [];
       // label the email lines with the visible field labels (text before any "required" marker)
       [].forEach.call(form.querySelectorAll('[name]'), function (el) { if (el.value) lines.push(form.querySelector('label[for="' + el.id + '"]').firstChild.textContent.trim() + ': ' + el.value); });
+      // counts the email app opening, not whether the email was actually sent
+      if (window.umami) umami.track('Enquiry sent', { experience: f.get('type') || 'Not sure yet', occasion: f.get('etype') || 'Not given' });
       location.href = 'mailto:cuboculinary@gmail.com?subject=' + encodeURIComponent('Cubo enquiry — ' + (f.get('type') || 'General')) + '&body=' + encodeURIComponent(lines.join('\n'));
     });
   }
+
+  /* Copy buttons: copy the email address and confirm with a toast */
+  var copyBtns = d.querySelectorAll('.copy-btn');
+  if (copyBtns.length) {
+    var toast = d.createElement('div');
+    toast.className = 'toast'; toast.setAttribute('role', 'status');
+    d.body.appendChild(toast);
+    var say = function (msg) {
+      toast.textContent = msg; toast.classList.add('show');
+      clearTimeout(toast.t); toast.t = setTimeout(function () { toast.classList.remove('show'); }, 2500);
+    };
+    // older copy method for browsers or embedded views that block the Clipboard API
+    var legacyCopy = function (text, btn) {
+      var ta = d.createElement('textarea');
+      ta.value = text; ta.setAttribute('readonly', ''); ta.style.position = 'fixed'; ta.style.opacity = '0';
+      d.body.appendChild(ta); ta.select();
+      var ok = false; try { ok = d.execCommand('copy'); } catch (e) {}
+      ta.remove(); btn.focus();
+      return ok ? Promise.resolve() : Promise.reject();
+    };
+    copyBtns.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var text = b.getAttribute('data-copy');
+        (navigator.clipboard ? navigator.clipboard.writeText(text) : Promise.reject())['catch'](function () { return legacyCopy(text, b); }).then(function () {
+          say('Email address copied');
+          if (window.umami) umami.track('Email copied', { page: location.pathname });
+        }, function () { say('Couldn’t copy. The address is ' + text); });
+      });
+    });
+  }
+
+  /* Analytics (Umami, cookieless): count clicks on links towards an enquiry or a follow */
+  d.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href]');
+    if (!a || !window.umami) return;
+    var h = a.getAttribute('href');
+    var name = /^\/?enquire/.test(h) ? 'Enquire link'
+      : h.indexOf('instagram.com') > -1 ? 'Instagram link'
+      : h.indexOf('mailto:') === 0 ? 'Email link'
+      : /^\/?collaborate/.test(h) ? 'Work with us link' : '';
+    if (name) umami.track(name, { page: location.pathname, link: a.textContent.replace(/\s+/g, ' ').trim().slice(0, 60) });
+  });
 })();
