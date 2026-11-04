@@ -30,7 +30,7 @@ Upload the whole folder to a static host that serves `about.html` at `/about`. G
 | `enquire.html` | Enquiry form ("Plan your gathering") |
 | `journal.html` | Journal: list of posts, newest first |
 | `things-that-inspire-the-way-we-cook.html` | First Journal post, by Michelle |
-| `journal-post.html` | Template for a new Journal post (not linked; `noindex`). Copy it, give the copy a short URL-style file name, drop the `noindex` line, add the canonical and share tags (as on the first post), then list it on `journal.html`, in `sitemap.xml` and in `llms.txt` |
+| `journal-post.html` | Template for a new Journal post (not linked; `noindex`). Copy it and follow the checklist at the top of the file |
 | `privacy.html` | Privacy policy, linked from the footer and the enquiry form |
 
 The header and footer are copied into every page, so a change to either must be made in each HTML file.

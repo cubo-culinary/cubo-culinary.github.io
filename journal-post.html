@@ -2,16 +2,62 @@
 <html lang="en-AU" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sample post — Cubo Journal</title>
-<meta name="description" content="A one or two sentence summary of the story.">
+<!--
+  JOURNAL POST TEMPLATE. For a new post:
+  1. Copy this file and name it after the post, in lowercase with hyphens (e.g. wattle-season.html); the URL becomes /wattle-season.
+  2. Delete the "noindex" line below and this comment.
+  3. Replace every "post-url" with that name, and "Post title" / the summary in <title>, the description, og:title, og:description and the JSON-LD.
+  4. In the JSON-LD set datePublished (YYYY-MM-DD) and "image"; point og:image at a 1200x630 crop of the post's photo.
+  5. Write the post below, then add a row to journal.html (newest first) and a line to sitemap.xml and llms.txt.
+-->
 <meta name="robots" content="noindex">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Post title — Cubo Journal</title>
+<meta name="description" content="A one or two sentence summary of the story.">
+<link rel="canonical" href="https://cuboculinary.com.au/post-url">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Cubo">
+<meta property="og:locale" content="en_AU">
+<meta property="og:url" content="https://cuboculinary.com.au/post-url">
+<meta property="og:title" content="Post title — Cubo Journal">
+<meta property="og:description" content="A one or two sentence summary of the story.">
+<meta property="og:image" content="https://cuboculinary.com.au/images/share-1200x630.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Hands finishing a plated seafood dish on a green ceramic plate">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#1C1B18">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/style.css?v=11">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="8970d449-7867-4e9a-8093-36ad67cedc68" data-domains="cuboculinary.com.au,cubo-culinary.github.io"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Post title",
+  "description": "A one or two sentence summary of the story.",
+  "image": "https://cuboculinary.com.au/images/share-1200x630.jpg",
+  "datePublished": "2026-01-01",
+  "inLanguage": "en-AU",
+  "mainEntityOfPage": "https://cuboculinary.com.au/post-url",
+  "author": {
+    "@type": "Person",
+    "name": "Michelle Agustin",
+    "url": "https://cuboculinary.com.au/about#michelle"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Cubo",
+    "url": "https://cuboculinary.com.au/",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://cuboculinary.com.au/images/logo-sienna.png"
+    }
+  }
+}
+</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -21,21 +67,20 @@
   <button class="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
 </header>
 <main id="main" tabindex="-1">
-<!-- EDIT: sample layout for a single Journal post. Copy this file per story and replace every line of text and each image. -->
-<section class="page-hero with-img vivid" style="--bg:url('../images/bush-2880.webp')"><div class="wrap post-head">
-  <p class="post-meta"><a href="journal">Journal</a><i>/</i>Foraging</p>
-  <h1 class="h-xl">Sample post title, kept to one short line</h1>
-  <p class="lede rv d2">A one or two sentence summary of the story. It is also the description shown in search results and when the post is shared.</p>
-  <p class="post-by rv d3">By Michelle Agustin · Month 2026 · 5 min read</p>
+<section class="page-hero vivid"><div class="wrap post-head">
+  <p class="post-meta"><a href="journal">Journal</a><i>/</i>Category</p>
+  <h1 class="h-xl">Post title, kept short</h1>
+  <p class="lede rv d2">A one or two sentence summary of the story. Use the same words for the description in the page head and on the Journal list.</p>
+  <p class="post-by rv d3">By <a href="about#michelle">Michelle Agustin</a> · Month 2026 · 4 min read</p>
 </div></section>
-<article class="sec pt-s">
+<article class="sec pt-0">
   <div class="wrap post">
+    <figure class="wide"><img src="images/plate.jpg" alt="Describe what is in the photo" loading="lazy"><figcaption>Caption: what it is, where and when.</figcaption></figure>
     <p>Open with a moment: where you were, what the season was doing, who was there. A reader should be able to picture it before they know what the story is about.</p>
     <p>Keep paragraphs short. Three or four sentences read well at this width, on a phone as much as on a laptop.</p>
     <h2>A subheading to break up the story</h2>
     <p>Use a subheading every few paragraphs, when the story moves on: from the walk to the kitchen, from the ingredient to the dish.</p>
-    <figure><img src="images/plate.jpg" alt="Describe what is in the photo" loading="lazy"><figcaption>Caption: what it is, where and when.</figcaption></figure>
-    <p>Photos sit at the width of the text. One or two per story is plenty; the Gallery is for the rest.</p>
+    <p>The first photo uses <code>class="wide"</code> so it runs wider than the text; export it about 2000px wide. Further photos can leave the class off and sit at the width of the text. One or two per story is plenty; the Gallery is for the rest.</p>
     <blockquote>A pull quote: one line from the story worth reading twice.</blockquote>
     <h2>A list, for ingredients or steps</h2>
     <ul class="check-list single">
