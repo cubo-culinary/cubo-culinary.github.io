@@ -136,7 +136,8 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 - [x] Add Open Graph and Twitter Card tags, with a 1200×630 preview image (`images/share-1200x630.jpg`)
 - [x] Add structured data (JSON-LD) on the home page: business, Michelle as chef and founder, Melbourne and Victoria service area, email, both Instagram accounts
 - [x] Use full URLs in `llms.txt`
-- [ ] Point the domain at GitHub Pages at the registrar: A records for `cuboculinary.com.au` to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for `www` to `cubo-culinary.github.io`
+- [x] Point the domain at GitHub Pages in Namecheap (Advanced DNS, Namecheap BasicDNS nameservers): A records for `cuboculinary.com.au` to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for `www` to `cubo-culinary.github.io`
+- [ ] Verify the domain on GitHub (account or organisation Settings → Pages → Add a domain, then add the TXT record it gives in Namecheap), so no one else can attach it to their own GitHub Pages site
 - [ ] Once `dig cuboculinary.com.au +short` shows those four addresses, add a `CNAME` file at the root containing `cuboculinary.com.au` and push. Not before: GitHub then redirects cubo-culinary.github.io to the domain, so a domain that does not resolve yet takes the site offline
 - [ ] In the repository's Settings → Pages, enter `cuboculinary.com.au` as the custom domain and turn on Enforce HTTPS once it is offered
 - [ ] Once live, submit `https://cuboculinary.com.au/sitemap.xml` in Google Search Console and check a share preview (for example by pasting a link into a message)
