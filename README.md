@@ -16,7 +16,7 @@ Then visit <http://localhost:8000>.
 
 ## Deploy
 
-Upload the whole folder to a static host that serves `about.html` at `/about`. GitHub Pages and Netlify do this by default; on other hosts, check before switching. The repository is named `cubo-culinary.github.io`, so with GitHub Pages enabled on `main` it is served at <https://cubo-culinary.github.io>.
+Upload the whole folder to a static host that serves `about.html` at `/about`. GitHub Pages and Netlify do this by default; on other hosts, check before switching. The repository is named `cubo-culinary.github.io`, so with GitHub Pages enabled on `main` it is served at <https://cubo-culinary.github.io>, and at the custom domain <https://cuboculinary.com.au> once that is pointed at it.
 
 ## Pages
 
@@ -44,6 +44,9 @@ images/         photography, logos, favicon
 404.html        page GitHub Pages shows for broken links (uses root-relative paths)
 llms.txt        plain-text summary of Cubo for AI tools
 serve.py        local preview server with clean URLs
+CNAME           custom domain for GitHub Pages
+robots.txt      crawler rules and sitemap location
+sitemap.xml     public pages for search engines
 ```
 
 ## Design system
@@ -90,26 +93,29 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 - [ ] Replace placeholder text marked `<!-- EDIT -->`: the sample menu dishes, journal posts
 - [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
 - [ ] Connect the enquiry form to a real service
-- [ ] Confirm the email address, Instagram/TikTok handles and pricing
+- [x] Confirm the email address and Instagram handles (pricing stays off the site)
 
 ## To do
 
 - [ ] Consider adding testimonials or partners (real ones only) to the home page and the Work with us page
   - Partners to add: Plated Narratives, Alkira
 - [ ] Build out the Journal page (`journal.html`, currently unlinked)
-- [ ] Add the TikTok link to the footer once the account is active
 
-## Once the domain is confirmed
+## Domain: cuboculinary.com.au
 
-- [ ] Add `robots.txt` and `sitemap.xml` (public pages only, not the Journal or 404)
-- [ ] Add a canonical link to every page, using the clean URL (`/about`, not `/about.html`), since GitHub Pages serves both
-- [ ] Add Open Graph and Twitter Card tags, with a 1200×630 preview image
-- [ ] Add structured data (JSON-LD) on the home page: business name, founder, Melbourne and Victoria service area, email, both Instagram accounts
-- [ ] Use full URLs in `llms.txt`
+- [x] Add `CNAME`, `robots.txt` and `sitemap.xml` (public pages only, not the Journal or 404)
+- [x] Add a canonical link to every public page, using the clean URL (`/about`, not `/about.html`), since GitHub Pages serves both
+- [x] Add Open Graph and Twitter Card tags, with a 1200×630 preview image (`images/share-1200x630.jpg`)
+- [x] Add structured data (JSON-LD) on the home page: business, Michelle as chef and founder, Melbourne and Victoria service area, email, both Instagram accounts
+- [x] Use full URLs in `llms.txt`
+- [ ] Point the domain at GitHub Pages at the registrar: A records for `cuboculinary.com.au` to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for `www` to `cubo-culinary.github.io`
+- [ ] In the repository's Settings → Pages, enter `cuboculinary.com.au` as the custom domain and turn on Enforce HTTPS once it is offered
+- [ ] Once live, submit `https://cuboculinary.com.au/sitemap.xml` in Google Search Console and check a share preview (for example by pasting a link into a message)
+- [ ] When a page's title or description changes, update its `og:title` / `og:description` too; new public pages need a canonical link, the social tags and a line in `sitemap.xml`
 
 ## Off-site
 
 - [ ] Set up a Google Business Profile as a service-area business (Melbourne and Victoria)
 - [ ] Keep the name, email and website link the same across both Instagram bios and the Google profile
-- [ ] Add an FAQ once the answers are confirmed: minimum guests, travel area, booking lead time, dietary needs, pricing
+- [ ] Add an FAQ once the answers are confirmed: minimum spend, travel area, booking lead time, dietary needs
 - [ ] Collect real reviews on Google, to use as testimonials
