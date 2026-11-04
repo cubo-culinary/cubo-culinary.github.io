@@ -2,7 +2,7 @@
 
 Website for **Cubo**, private dining, wilderness feasts and events in Melbourne, Victoria: Australian terroir × Asian heritage.
 
-Plain HTML, CSS and JavaScript. No build step, no dependencies beyond Google Fonts.
+Plain HTML, CSS and JavaScript. No build step and no dependencies; the fonts are hosted with the site.
 
 ## Run locally
 
@@ -64,6 +64,7 @@ Visitors with ad blockers are not counted, so treat the numbers as a lower bound
 css/style.css   all styles
 js/main.js      header on scroll, mobile menu, scroll reveal, gallery filters and viewer, enquiry form
 images/         photography, logos, favicon
+fonts/          Cormorant Garamond and Jost (WOFF2) with their licences
 404.html        page GitHub Pages shows for broken links (uses root-relative paths)
 llms.txt        plain-text summary of Cubo for AI tools
 serve.py        local preview server with clean URLs
@@ -85,7 +86,7 @@ Everything is defined at the top of `css/style.css` in `:root`.
 | `--blue` (Powder Blue) | `#8FA5A8` |
 | `--olive` | `#6B6F4A` |
 
-**Type:** Cormorant Garamond (headings) and Jost (text), loaded from Google Fonts. Five sizes only; `--fs-sm` (12px) is the minimum text size.
+**Type:** Cormorant Garamond (headings) and Jost (text), self-hosted in `fonts/` (variable WOFF2 files from Google Fonts, SIL Open Font License; the licences sit beside them). The `@font-face` rules are at the top of `css/style.css`. Five sizes only; `--fs-sm` (12px) is the minimum text size.
 
 | Token | Use |
 |---|---|
