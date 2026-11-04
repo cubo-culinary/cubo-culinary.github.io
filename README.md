@@ -124,7 +124,8 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 ## To do
 
 - [ ] Consider adding testimonials or partners (real ones only) to the home page and the Work with us page
-  - Partners to add: Plated Narratives, Alkira
+  - Plated Narratives (food photography, <https://www.instagram.com/platednarratives.au/>): credit their photos on the site ("Photography: Plated Narratives") once it is confirmed which are theirs
+  - Alkira: add once its link is confirmed
 - [x] Publish the Journal with its first post
 - [ ] Once there are three Journal posts with photos, add a "From the Journal" section to the home page showing the latest three, just after Meet Michelle
 
