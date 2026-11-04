@@ -22,7 +22,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="css/style.css?v=7">
+<link rel="stylesheet" href="css/style.css?v=8">
 <script defer src="https://cloud.umami.is/script.js" data-website-id="8970d449-7867-4e9a-8093-36ad67cedc68" data-domains="cuboculinary.com.au,cubo-culinary.github.io"></script>
 </head>
 <body>
@@ -42,18 +42,19 @@
       <div class="blk"><span class="k">Based in</span>Melbourne, Victoria, Australia<br><span class="note">Travelling for wilderness feasts and events.</span></div>
     </div>
     <form id="enquiry" class="form rv d1">
-      <div class="field"><label for="name">Name <span class="req">required</span></label><input id="name" name="name" required autocomplete="name"></div>
-      <div class="field"><label for="email">Email <span class="req">required</span></label><input id="email" name="email" type="email" required autocomplete="email"></div>
-      <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" autocomplete="tel"></div>
+      <div class="field"><label for="name">Name <span class="req">required</span></label><input id="name" name="name" required maxlength="100" autocomplete="name"></div>
+      <div class="field"><label for="email">Email <span class="req">required</span></label><input id="email" name="email" type="email" required maxlength="254" autocomplete="email"></div>
+      <div class="field"><label for="phone">Phone</label><input id="phone" name="phone" type="tel" maxlength="30" autocomplete="tel"></div>
       <div class="field"><label for="etype">Occasion</label>
         <select id="etype" name="etype"><option value="">Select…</option><option>Birthday / celebration</option><option>Dinner party</option><option>Wedding</option><option>Corporate function</option><option>Brand event</option><option>Venue / winery collaboration</option><option>Consulting</option><option>Other</option></select></div>
-      <div class="field"><label for="date">Date</label><input id="date" name="date" type="text" placeholder="e.g. Saturday 14 March, or flexible"></div>
-      <div class="field"><label for="location">Location</label><input id="location" name="location" placeholder="Suburb, venue or region"></div>
-      <div class="field"><label for="guests">Number of guests</label><input id="guests" name="guests" inputmode="numeric"></div>
+      <div class="field"><label for="date">Date</label><input id="date" name="date" type="text" maxlength="100" placeholder="e.g. Saturday 14 March, or flexible"></div>
+      <div class="field"><label for="location">Location</label><input id="location" name="location" maxlength="120" placeholder="Suburb, venue or region"></div>
+      <div class="field"><label for="guests">Number of guests</label><input id="guests" name="guests" inputmode="numeric" maxlength="10"></div>
       <div class="field"><label for="type">Preferred experience</label>
         <select id="type" name="type"><option value="">Not sure yet</option><option>Private Dining</option><option>Wilderness Feasts</option><option>Events &amp; Experiences</option><option>Partnership</option><option>Consulting</option></select></div>
-      <div class="field full"><label for="diet">Dietary requirements</label><input id="diet" name="diet" placeholder="Allergies, vegetarian, halal, etc."></div>
-      <div class="full"><button class="btn" type="submit">Send enquiry</button><p class="note mt-s">Sending opens your email app with your details filled in. Or email us at <a href="mailto:cuboculinary@gmail.com">cuboculinary@gmail.com</a>.</p></div>
+      <div class="field full"><label for="diet">Dietary requirements</label><input id="diet" name="diet" maxlength="300" placeholder="Allergies, vegetarian, halal, etc."></div>
+      <div class="hp" aria-hidden="true"><label for="botcheck">Leave this unticked</label><input id="botcheck" name="botcheck" type="checkbox" tabindex="-1" autocomplete="off"></div>
+      <div class="full"><button class="btn" type="submit">Send enquiry</button><p class="form-status" role="status" tabindex="-1" hidden></p><p class="note mt-s">Your details are sent securely to Cubo and used only to reply to your enquiry. See our <a href="privacy">privacy policy</a>, or email us directly at <a href="mailto:cuboculinary@gmail.com">cuboculinary@gmail.com</a>.</p></div>
     </form>
   </div>
 </section>
@@ -74,8 +75,8 @@
       </div>
     </div>
   </div>
-  <div class="wrap copy"><p class="ack">We acknowledge the Traditional Custodians of the lands on which we gather and cook.</p>© 2026 Cubo · A thoughtful conversation between cultures.</div>
+  <div class="wrap copy"><p class="ack">We acknowledge the Traditional Custodians of the lands on which we gather and cook.</p>© 2026 Cubo · A thoughtful conversation between cultures. · <a href="privacy">Privacy</a></div>
 </footer>
-<script src="js/main.js?v=3"></script>
+<script src="js/main.js?v=4"></script>
 </body>
 </html>

@@ -30,10 +30,17 @@ Upload the whole folder to a static host that serves `about.html` at `/about`. G
 | `enquire.html` | Enquiry form ("Plan your gathering") |
 | `journal.html` | Kept but not linked from the nav until there are posts |
 | `journal-post.html` | Sample layout for a single Journal post (copy per story; `noindex`) |
+| `privacy.html` | Privacy policy, linked from the footer and the enquiry form |
 
 The header and footer are copied into every page, so a change to either must be made in each HTML file.
 
 After changing `css/style.css` or `js/main.js`, raise the `?v=` number on its link in every page so browsers fetch the new file instead of a cached one.
+
+## Enquiries
+
+The form on the Enquire page posts to [Web3Forms](https://web3forms.com), which emails each enquiry to cuboculinary@gmail.com with the visitor's address as reply-to, so a reply goes straight to them. The access key is in `js/main.js`; it is public by design (it can only send to Cubo's inbox) and can be replaced from the Web3Forms dashboard if it is ever misused. A hidden checkbox catches most spam bots. If sending fails, the visitor sees an error with the email address to write to instead.
+
+The form's website URL in Web3Forms is set to `cuboculinary.com.au/enquire`. If test submissions from `localhost` or `cubo-culinary.github.io` are refused, change that setting while testing.
 
 ## Analytics
 
@@ -41,7 +48,8 @@ After changing `css/style.css` or `js/main.js`, raise the `?v=` number on its li
 
 | Event | When |
 |---|---|
-| `Enquiry sent` | The enquiry form opens the visitor's email app (not proof the email was sent), with the chosen experience and occasion |
+| `Enquiry sent` | Web3Forms confirmed the enquiry was sent, with the chosen experience and occasion |
+| `Enquiry failed` | The enquiry did not send (network error or Web3Forms refused it), with the reason |
 | `Enquire link` | Any link to the enquiry page, with the page and link text |
 | `Instagram link` | Any Instagram link |
 | `Email link` | The email address link |
@@ -106,7 +114,8 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 - [ ] Replace the rest of the photography with Cubo's own
 - [ ] Replace placeholder text marked `<!-- EDIT -->`: the sample menu dishes, journal posts
 - [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
-- [ ] Connect the enquiry form to a real service
+- [x] Connect the enquiry form to a real service (Web3Forms)
+- [ ] Review the Privacy page (`privacy.html`) and confirm it matches how Cubo handles enquiries
 - [x] Confirm the email address and Instagram handles (pricing stays off the site)
 
 ## To do

@@ -78,20 +78,44 @@
     });
   }
 
-  /* Enquiry form -> opens the visitor's email app addressed to Cubo.
-     Replace with Formspree / Netlify Forms / your host's form handler when live. */
+  /* Enquiry form -> emailed to cuboculinary@gmail.com through Web3Forms.
+     The access key is public by design (it can only send to Cubo's inbox); manage or replace it at web3forms.com. */
   var form = d.querySelector('#enquiry');
   if (form) {
     var q = new URLSearchParams(location.search).get('type');
     if (q) { var sel = form.querySelector('select[name="type"]'); [].forEach.call(sel.options, function (o) { if (o.value === q) sel.value = q; }); }
+    var btn = form.querySelector('button[type="submit"]'), status = form.querySelector('.form-status');
+    var showStatus = function (msg, ok) {
+      status.textContent = msg; status.hidden = false;
+      status.classList.toggle('error', !ok); status.focus();
+    };
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      var f = new FormData(form), lines = [];
+      var f = new FormData(form), name = f.get('name').trim(), email = f.get('email').trim();
+      var thanks = 'Thank you, ' + name + '. Your enquiry is on its way, and we’ll reply to ' + email + ' soon.';
+      // bots tick the hidden box; act as if it worked so they don't retry
+      if (form.botcheck.checked) { form.reset(); return showStatus(thanks, true); }
+      var data = { access_key: '973919c9-3647-49dd-b0d2-66c8a45863ad', subject: 'Cubo enquiry — ' + (f.get('type') || 'General'), from_name: 'Cubo website', replyto: email };
       // label the email lines with the visible field labels (text before any "required" marker)
-      [].forEach.call(form.querySelectorAll('[name]'), function (el) { if (el.value) lines.push(form.querySelector('label[for="' + el.id + '"]').firstChild.textContent.trim() + ': ' + el.value); });
-      // counts the email app opening, not whether the email was actually sent
-      if (window.umami) umami.track('Enquiry sent', { experience: f.get('type') || 'Not sure yet', occasion: f.get('etype') || 'Not given' });
-      location.href = 'mailto:cuboculinary@gmail.com?subject=' + encodeURIComponent('Cubo enquiry — ' + (f.get('type') || 'General')) + '&body=' + encodeURIComponent(lines.join('\n'));
+      [].forEach.call(form.querySelectorAll('[name]'), function (el) {
+        if (el.value && el.name !== 'botcheck') data[form.querySelector('label[for="' + el.id + '"]').firstChild.textContent.trim()] = el.value.trim();
+      });
+      btn.disabled = true; btn.textContent = 'Sending…';
+      var ctrl = window.AbortController ? new AbortController() : null, timer = ctrl && setTimeout(function () { ctrl.abort(); }, 15000);
+      fetch('https://api.web3forms.com/submit', {
+        method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(data), signal: ctrl && ctrl.signal
+      }).then(function (r) {
+        return r.json().then(function (j) { if (!r.ok || !j.success) throw new Error(j.message || 'HTTP ' + r.status); });
+      }).then(function () {
+        if (window.umami) umami.track('Enquiry sent', { experience: f.get('type') || 'Not sure yet', occasion: f.get('etype') || 'Not given' });
+        form.reset(); showStatus(thanks, true);
+      }, function (err) {
+        if (window.umami) umami.track('Enquiry failed', { reason: String(err && err.message).slice(0, 60) });
+        showStatus('Sorry, your enquiry didn’t send. Please try again, or email us at cuboculinary@gmail.com.', false);
+      }).then(function () {
+        clearTimeout(timer); btn.disabled = false; btn.textContent = 'Send enquiry';
+      });
     });
   }
 

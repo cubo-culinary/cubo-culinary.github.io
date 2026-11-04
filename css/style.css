@@ -360,6 +360,11 @@ section { position: relative; }
 .field .req { margin-left: 8px; text-transform: none; letter-spacing: .02em; opacity: .7; }
 .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--sienna-light); }
 .field input:focus-visible, .field select:focus-visible, .field textarea:focus-visible { outline: 2px solid var(--sienna-light); outline-offset: 4px; }
+.hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.btn:disabled { opacity: .6; cursor: wait; }
+.form-status { margin-top: 18px; padding-left: 14px; border-left: 2px solid var(--sienna-light); }
+.form-status.error { color: var(--sienna-light); }
+.form-status:focus { outline: none; }
 .contact-grid { display: grid; grid-template-columns: 1fr 1.4fr; gap: clamp(40px, 7vw, 110px); }
 .contact-info .k { font-size: var(--fs-sm); letter-spacing: .2em; text-transform: uppercase; color: var(--sienna-light); display: block; margin-bottom: 4px; }
 .contact-info .blk { margin-bottom: 28px; }
@@ -397,6 +402,7 @@ section { position: relative; }
 .foot-bottom .logo { width: clamp(84px, 7vw, 104px); background-image: url(../images/logo-ivory.png); opacity: .9; }
 .copy { max-width: none; width: 100%; font-size: var(--fs-sm); line-height: 1.7; text-align: center; padding: 30px var(--gutter) 34px; margin-top: 0; letter-spacing: .04em; border-top: 1px solid rgba(244,239,230,.12); background: var(--charcoal); color: rgba(244,239,230,.5); }
 .copy .ack { margin: 0 0 6px; color: rgba(244,239,230,.75); }
+.copy a { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 1000px) {
   .foot-grid { grid-template-columns: 1fr; }
   .foot-img { display: none; }
