@@ -44,7 +44,6 @@ images/         photography, logos, favicon
 404.html        page GitHub Pages shows for broken links (uses root-relative paths)
 llms.txt        plain-text summary of Cubo for AI tools
 serve.py        local preview server with clean URLs
-CNAME           custom domain for GitHub Pages
 robots.txt      crawler rules and sitemap location
 sitemap.xml     public pages for search engines
 ```
@@ -103,12 +102,13 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 
 ## Domain: cuboculinary.com.au
 
-- [x] Add `CNAME`, `robots.txt` and `sitemap.xml` (public pages only, not the Journal or 404)
+- [x] Add `robots.txt` and `sitemap.xml` (public pages only, not the Journal or 404)
 - [x] Add a canonical link to every public page, using the clean URL (`/about`, not `/about.html`), since GitHub Pages serves both
 - [x] Add Open Graph and Twitter Card tags, with a 1200×630 preview image (`images/share-1200x630.jpg`)
 - [x] Add structured data (JSON-LD) on the home page: business, Michelle as chef and founder, Melbourne and Victoria service area, email, both Instagram accounts
 - [x] Use full URLs in `llms.txt`
 - [ ] Point the domain at GitHub Pages at the registrar: A records for `cuboculinary.com.au` to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for `www` to `cubo-culinary.github.io`
+- [ ] Once `dig cuboculinary.com.au +short` shows those four addresses, add a `CNAME` file at the root containing `cuboculinary.com.au` and push. Not before: GitHub then redirects cubo-culinary.github.io to the domain, so a domain that does not resolve yet takes the site offline
 - [ ] In the repository's Settings → Pages, enter `cuboculinary.com.au` as the custom domain and turn on Enforce HTTPS once it is offered
 - [ ] Once live, submit `https://cuboculinary.com.au/sitemap.xml` in Google Search Console and check a share preview (for example by pasting a link into a message)
 - [ ] When a page's title or description changes, update its `og:title` / `og:description` too; new public pages need a canonical link, the social tags and a line in `sitemap.xml`
