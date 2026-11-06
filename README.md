@@ -118,7 +118,7 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 - [ ] Add a photo to the first Journal post (marked `<!-- EDIT -->` in `things-that-inspire-the-way-we-cook.html`)
 - [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
 - [x] Connect the enquiry form to a real service (Web3Forms)
-- [ ] Review the Privacy page (`privacy.html`) and confirm it matches how Cubo handles enquiries
+- [x] Review the Privacy page (`privacy.html`) and confirm it matches how Cubo handles enquiries
 - [x] Confirm the email address and Instagram handles (pricing stays off the site)
 
 ## To do
