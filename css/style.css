@@ -283,12 +283,11 @@ section { position: relative; }
 /* Sample menu */
 .menu-sheet { max-width: 760px; margin: 0 auto; text-align: center; padding: clamp(40px, 6vw, 80px) clamp(20px, 5vw, 70px); border: 1px solid rgba(28,27,24,.2); position: relative; }
 .menu-sheet::before { content: ""; position: absolute; inset: 10px; border: 1px solid rgba(28,27,24,.1); pointer-events: none; }
-.menu-sheet .logo-mini { display: block; width: 110px; aspect-ratio: 1241 / 460; background: url(../images/logo-sienna.png) center / contain no-repeat; font-size: 0; text-indent: -9999px; overflow: hidden; margin-bottom: 6px; }
+.menu-sheet .logo-mini { display: block; width: 110px; aspect-ratio: 1241 / 460; background: url(../images/logo-sienna.png) center / contain no-repeat; font-size: 0; text-indent: -9999px; overflow: hidden; margin: 0 auto 24px; }
 .menu-sheet h3 { font-family: var(--sans); font-size: var(--fs-sm); letter-spacing: .22em; text-transform: uppercase; font-weight: 400; margin-bottom: 40px; }
 .course { margin-bottom: 30px; }
 .course small { display: block; font-size: var(--fs-sm); letter-spacing: .22em; text-transform: uppercase; color: var(--sienna); margin-bottom: 6px; font-weight: 500; }
-.course h4 { font-size: var(--fs-md); margin-bottom: 4px; }
-.course p { margin: 0; opacity: .72; }
+.course p { margin: 0; text-wrap: balance; }
 .menu-sheet .fine { font-size: var(--fs-sm); opacity: .65; font-style: italic; max-width: 520px; margin: 40px auto 0; line-height: 1.7; }
 
 /* Gallery */

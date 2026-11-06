@@ -114,7 +114,7 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 
 - [x] Michelle's portrait (`images/michelle-portrait-*.webp`, from `michelle_portrait.jpg`)
 - [ ] Replace the rest of the photography with Cubo's own
-- [ ] Replace placeholder text marked `<!-- EDIT -->`: the sample menu dishes
+- [x] Replace the placeholder sample menu dishes with a real menu
 - [ ] Add a photo to the first Journal post (marked `<!-- EDIT -->` in `things-that-inspire-the-way-we-cook.html`)
 - [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
 - [x] Connect the enquiry form to a real service (Web3Forms)
