@@ -130,7 +130,8 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 - [ ] Get permission from recognisable guests in the Wilderness Feasts, Events and Gallery photos
 - [ ] Have Michelle confirm the dish names, gallery captions and image descriptions, plus "Three small bites" on the sample menu
 - [x] Replace the placeholder sample menu dishes with a real menu
-- [ ] Add photos to the first Journal post (the `intro-*`, `lume*` and `what-connect-*` files in `images/` are waiting; marked `<!-- EDIT -->` in `things-that-inspire-the-way-we-cook.html`)
+- [x] Add photos to the first Journal post
+- [ ] Get permission from the people pictured in the first Journal post's career photos, and have Michelle confirm their captions
 - [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
 - [x] Connect the enquiry form to a real service (Web3Forms)
 - [x] Review the Privacy page (`privacy.html`) and confirm it matches how Cubo handles enquiries

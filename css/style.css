@@ -349,6 +349,10 @@ section { position: relative; }
 .post figure { margin: 48px 0; }
 .post figure img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .post figure.wide { width: min(1000px, 100vw - var(--gutter) * 2); margin-left: 50%; transform: translateX(-50%); }
+.post-photos { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.post-photos.four { grid-template-columns: repeat(4, 1fr); }
+.post .post-photos img { display: block; height: auto; aspect-ratio: 1; }
+@media (max-width: 700px) { .post-photos.four { grid-template-columns: repeat(2, 1fr); } }
 .post figcaption { margin-top: 12px; font-size: var(--fs-sm); opacity: .65; }
 .post blockquote { margin: 48px 0; padding-left: 28px; border-left: 1px solid var(--sienna-light); font-family: var(--serif); font-style: italic; font-size: var(--fs-md); line-height: 1.45; }
 .post .check-list { margin-bottom: 24px; }
