@@ -16,7 +16,7 @@ Then visit <http://localhost:8000>.
 
 ## Deploy
 
-Upload the whole folder to a static host that serves `about.html` at `/about`. GitHub Pages and Netlify do this by default; on other hosts, check before switching. The repository is named `cubo-culinary.github.io`, so with GitHub Pages enabled on `main` it is served at <https://cubo-culinary.github.io>, and at the custom domain <https://cuboculinary.com.au> once that is pointed at it.
+Upload the whole folder to a static host that serves `about.html` at `/about`. GitHub Pages and Netlify do this by default; on other hosts, check before switching. The repository is named `cubo-culinary.github.io`, so with GitHub Pages enabled on `main` it is served at <https://cuboculinary.com.au> (set by the `CNAME` file), and <https://cubo-culinary.github.io> redirects there. The domain's DNS is in Namecheap (A records to GitHub Pages, `www` to `cubo-culinary.github.io`, and GitHub's verification TXT record); keep those records, or the site goes offline.
 
 ## Pages
 
@@ -36,6 +36,8 @@ Upload the whole folder to a static host that serves `about.html` at `/about`. G
 The header and footer are copied into every page, so a change to either must be made in each HTML file.
 
 After changing `css/style.css` or `js/main.js`, raise the `?v=` number on its link in every page so browsers fetch the new file instead of a cached one.
+
+When a page's title or description changes, update its `og:title` / `og:description` too. A new public page needs a canonical link, the social tags and a line in `sitemap.xml`.
 
 ## Enquiries
 
@@ -125,42 +127,15 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 
 ## Before launch
 
-- [x] Michelle's portrait (`images/meet-michelle-*.webp`)
-- [x] Replace the food, event and people photography with Cubo's own (the stock photos under Photo credits are only for nature and texture)
-- [ ] Get permission from recognisable guests in the Wilderness Feasts, Events and Gallery photos
 - [ ] Have Michelle confirm the dish names, gallery captions and image descriptions, plus "Three small bites" on the sample menu
-- [x] Replace the placeholder sample menu dishes with a real menu
-- [x] Add photos to the first Journal post
-- [ ] Get permission from the people pictured in the first Journal post's career photos, and have Michelle confirm their captions
-- [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
-- [x] Connect the enquiry form to a real service (Web3Forms)
-- [x] Review the Privacy page (`privacy.html`) and confirm it matches how Cubo handles enquiries
-- [x] Confirm the email address and Instagram handles (pricing stays off the site)
 - [ ] Align Experiences with the services document: curated Private Dining, food-only scope note, Wilderness wording, and the four Events formats
-- [ ] Decide how guests book a seat at an open feast (the page only links to dates on Instagram)
-- [ ] Confirm "native ingredients" and "traditional knowledge" in the Wilderness Feasts description
 
 ## To do
 
 - [ ] Consider adding testimonials or partners (real ones only) to the home page and the Work with us page
   - Plated Narratives (food photography, <https://www.instagram.com/platednarratives.au/>): credit their photos on the site ("Photography: Plated Narratives") once it is confirmed which are theirs
   - Alkira: add once its link is confirmed
-- [x] Publish the Journal with its first post
 - [ ] Once there are three Journal posts with photos, add a "From the Journal" section to the home page showing the latest three, just after Meet Michelle
-
-## Domain: cuboculinary.com.au
-
-- [x] Add `robots.txt` and `sitemap.xml` (public pages only, not 404)
-- [x] Add a canonical link to every public page, using the clean URL (`/about`, not `/about.html`), since GitHub Pages serves both
-- [x] Add Open Graph and Twitter Card tags, with a 1200×630 preview image (`images/share-1200x630.jpg`)
-- [x] Add structured data (JSON-LD) on the home page: business, Michelle as chef and owner, Melbourne and Victoria service area, email, both Instagram accounts
-- [x] Use full URLs in `llms.txt`
-- [x] Point the domain at GitHub Pages in Namecheap (Advanced DNS, Namecheap BasicDNS nameservers): A records for `cuboculinary.com.au` to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for `www` to `cubo-culinary.github.io`
-- [ ] Verify the domain on GitHub (account or organisation Settings → Pages → Add a domain, then add the TXT record it gives in Namecheap), so no one else can attach it to their own GitHub Pages site
-- [x] Add a `CNAME` file at the root containing `cuboculinary.com.au`. Once pushed, GitHub redirects cubo-culinary.github.io to the domain, so the domain must keep resolving or the site goes offline
-- [ ] In the repository's Settings → Pages, enter `cuboculinary.com.au` as the custom domain and turn on Enforce HTTPS once it is offered
-- [ ] Once live, submit `https://cuboculinary.com.au/sitemap.xml` in Google Search Console and check a share preview (for example by pasting a link into a message)
-- [ ] When a page's title or description changes, update its `og:title` / `og:description` too; new public pages need a canonical link, the social tags and a line in `sitemap.xml`
 
 ## Off-site
 
