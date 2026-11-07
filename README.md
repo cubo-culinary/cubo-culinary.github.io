@@ -63,7 +63,7 @@ Visitors with ad blockers are not counted, so treat the numbers as a lower bound
 
 ```
 css/style.css   all styles
-js/main.js      header on scroll, mobile menu, scroll reveal, gallery filters and viewer, enquiry form
+js/main.js      header on scroll, mobile menu, scroll reveal, gallery viewer, enquiry form
 images/         photography, logos, favicon
 fonts/          Cormorant Garamond and Jost (WOFF2) with their licences
 404.html        page GitHub Pages shows for broken links (uses root-relative paths)
@@ -105,14 +105,14 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 
 | File | Used for | Photographer |
 |---|---|---|
-| `bush-2880.webp`, `bush-1000.webp` | About and sample post headers, home collage, gallery | [Mitchell Luo](https://unsplash.com/photos/Cip_dNOVI0A) |
-| `bark-800.webp` | Home collage | [Jude Infantini](https://unsplash.com/photos/mI-QcAP95Ok) |
-| `water-2880.webp`, `water-1000.webp` | Gallery header and gallery | [Sven van der Pluijm](https://unsplash.com/photos/52J7km2qTjk) |
-| `wattle-800.webp` | Home collage, Journal tile | [E Hillsley](https://unsplash.com/photos/Dg_nlS2dDME) |
+| `bush-2880.webp`, `bush-1000.webp`, `bush-800.webp` | About header and its phone version, sample post header, home collage | [Mitchell Luo](https://unsplash.com/photos/Cip_dNOVI0A) |
+| `bark-500.webp` | Home collage | [Jude Infantini](https://unsplash.com/photos/mI-QcAP95Ok) |
+| `water-2880.webp`, `water-1000.webp` | Gallery header and its phone version | [Sven van der Pluijm](https://unsplash.com/photos/52J7km2qTjk) |
+| `wattle-300.webp` | Home collage | [E Hillsley](https://unsplash.com/photos/Dg_nlS2dDME) |
 
 ## Before launch
 
-- [x] Michelle's portrait (`images/michelle-portrait-*.webp`, from `michelle_portrait.jpg`)
+- [x] Michelle's portrait (`images/meet-michelle-*.webp`)
 - [ ] Replace the rest of the photography with Cubo's own
 - [x] Replace the placeholder sample menu dishes with a real menu
 - [ ] Add a photo to the first Journal post (marked `<!-- EDIT -->` in `things-that-inspire-the-way-we-cook.html`)
