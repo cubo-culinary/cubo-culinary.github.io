@@ -21,8 +21,9 @@
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="fonts/cormorant-garamond-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/jost-latin.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="css/style.css?v=19">
-<link rel="preload" as="image" href="images/hero-plating.webp" fetchpriority="high">
+<link rel="stylesheet" href="css/style.css?v=20">
+<link rel="preload" as="image" href="images/hero-plating.webp" media="(min-width: 861px)" fetchpriority="high">
+<link rel="preload" as="image" href="images/hero-plating-1452.webp" media="(max-width: 860px)" fetchpriority="high">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -57,7 +58,7 @@
 <main id="main" tabindex="-1">
 
 <section class="hero">
-  <div class="hero-img" style="background-image:url('images/hero-plating.webp')" role="img" aria-label="Hands finishing a plated seafood dish on a green ceramic plate"></div>
+  <div class="hero-img" style="--bg:url('../images/hero-plating.webp'); --bg-sm:url('../images/hero-plating-1452.webp')" role="img" aria-label="Hands finishing a plated seafood dish on a green ceramic plate"></div>
   <div class="wrap"><div class="hero-copy">
     <span class="eyebrow rv">Private Dining | Culinary Experiences | Events · Melbourne</span>
     <h1>A thoughtful conversation between cultures.</h1>
