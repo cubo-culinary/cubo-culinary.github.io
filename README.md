@@ -128,7 +128,6 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 - [ ] Confirm whether `journal-banner-*.webp` is Cubo's own photo, and credit it under Photo credits if not
 - [ ] Get permission from recognisable guests in the Wilderness Feasts, Events and Gallery photos
 - [ ] Have Michelle confirm the dish names, gallery captions and image descriptions, plus "Three small bites" on the sample menu
-- [ ] Confirm whether Michelle is the person in the Gallery's "Foraging on the coast" and "Finishing a dish" photos and the About strip's sea photo, then name her in their image descriptions
 - [x] Replace the placeholder sample menu dishes with a real menu
 - [ ] Add a photo to the first Journal post (marked `<!-- EDIT -->` in `things-that-inspire-the-way-we-cook.html`)
 - [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
