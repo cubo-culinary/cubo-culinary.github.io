@@ -25,7 +25,7 @@ Upload the whole folder to a static host that serves `about.html` at `/about`. G
 | `index.html` | Home |
 | `about.html` | About Cubo, philosophy, Meet Michelle (`#michelle`) |
 | `experiences.html` | Private dining, wilderness feasts, events (bespoke and shared), sample menu |
-| `gallery.html` | Filterable photo gallery with a full-screen viewer |
+| `gallery.html` | Photo gallery with a full-screen viewer |
 | `collaborate.html` | Work with us: collaborations and consulting (`#consulting`) |
 | `enquire.html` | Enquiry form ("Plan your gathering") |
 | `journal.html` | Journal: list of posts, newest first |
@@ -97,7 +97,18 @@ Everything is defined at the top of `css/style.css` in `:root`.
 | `--fs-body` | Running text, form fields |
 | `--fs-sm` | Labels, nav, buttons, captions |
 
-Use the existing classes (`.eyebrow`, `.btn`, `.link-arrow`, `.row`, spacing utilities such as `.pt-s` and `.mt-m`) rather than inline styles. The one inline style kept on purpose is a section's background image, set as `style="--bg:url('../images/…')"`.
+Use the existing classes (`.eyebrow`, `.btn`, `.link-arrow`, `.row`, spacing utilities such as `.pt-s` and `.mt-m`) rather than inline styles. Inline styles are kept for photo crop positions, and for a section's background image, set as `style="--bg:url('../images/…')"`.
+
+## Adding photos
+
+Each new photo gets the same treatment:
+
+1. Crop it to suit where it sits, removing distractions.
+2. Export WebP in a desktop and a smaller phone size, named `<name>-<width>.webp`, never wider than the original.
+3. Give it a new file name when it replaces a photo, or browsers can keep showing the old one.
+4. Use `srcset` and `sizes` on an `<img>`. For a banner, set `--bg` and `--bg-sm` on the section.
+5. Check its brightness against the dark page. Photos at about 85 or more out of 255 get the `.dim` class (`.dim.strong` for very bright ones); the About strip uses a brightness filter instead.
+6. Delete the original and any photos left unused.
 
 ## Photo credits
 
@@ -105,7 +116,7 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 
 | File | Used for | Photographer |
 |---|---|---|
-| `bush-2880.webp`, `bush-1000.webp`, `bush-800.webp` | About header and its phone version, sample post header, home collage | [Mitchell Luo](https://unsplash.com/photos/Cip_dNOVI0A) |
+| `bush-2880.webp`, `bush-1000.webp`, `bush-800.webp` | About header and its phone version, home collage | [Mitchell Luo](https://unsplash.com/photos/Cip_dNOVI0A) |
 | `bark-500.webp` | Home collage | [Jude Infantini](https://unsplash.com/photos/mI-QcAP95Ok) |
 | `water-2880.webp`, `water-1000.webp` | Gallery header and its phone version | [Sven van der Pluijm](https://unsplash.com/photos/52J7km2qTjk) |
 | `wattle-300.webp` | Home collage | [E Hillsley](https://unsplash.com/photos/Dg_nlS2dDME) |
@@ -113,7 +124,11 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 ## Before launch
 
 - [x] Michelle's portrait (`images/meet-michelle-*.webp`)
-- [ ] Replace the rest of the photography with Cubo's own
+- [ ] Replace the rest of the photography with Cubo's own: the stock photos listed under Photo credits
+- [ ] Confirm whether `journal-banner-*.webp` is Cubo's own photo, and credit it under Photo credits if not
+- [ ] Get permission from recognisable guests in the Wilderness Feasts, Events and Gallery photos
+- [ ] Have Michelle confirm the dish names, gallery captions and image descriptions, plus "Three small bites" on the sample menu
+- [ ] Confirm whether Michelle is the person in the Gallery's "Foraging on the coast" and "Finishing a dish" photos and the About strip's sea photo, then name her in their image descriptions
 - [x] Replace the placeholder sample menu dishes with a real menu
 - [ ] Add a photo to the first Journal post (marked `<!-- EDIT -->` in `things-that-inspire-the-way-we-cook.html`)
 - [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
