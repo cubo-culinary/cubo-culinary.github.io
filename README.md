@@ -149,7 +149,7 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 - [x] Add `robots.txt` and `sitemap.xml` (public pages only, not the Journal or 404)
 - [x] Add a canonical link to every public page, using the clean URL (`/about`, not `/about.html`), since GitHub Pages serves both
 - [x] Add Open Graph and Twitter Card tags, with a 1200×630 preview image (`images/share-1200x630.jpg`)
-- [x] Add structured data (JSON-LD) on the home page: business, Michelle as chef and founder, Melbourne and Victoria service area, email, both Instagram accounts
+- [x] Add structured data (JSON-LD) on the home page: business, Michelle as chef and owner, Melbourne and Victoria service area, email, both Instagram accounts
 - [x] Use full URLs in `llms.txt`
 - [x] Point the domain at GitHub Pages in Namecheap (Advanced DNS, Namecheap BasicDNS nameservers): A records for `cuboculinary.com.au` to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for `www` to `cubo-culinary.github.io`
 - [ ] Verify the domain on GitHub (account or organisation Settings → Pages → Add a domain, then add the TXT record it gives in Namecheap), so no one else can attach it to their own GitHub Pages site
