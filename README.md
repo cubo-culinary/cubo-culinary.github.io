@@ -120,20 +120,24 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 | `bark-500.webp` | Home collage | [Jude Infantini](https://unsplash.com/photos/mI-QcAP95Ok) |
 | `water-2880.webp`, `water-1000.webp` | Gallery header and its phone version | [Sven van der Pluijm](https://unsplash.com/photos/52J7km2qTjk) |
 | `wattle-300.webp` | Home collage | [E Hillsley](https://unsplash.com/photos/Dg_nlS2dDME) |
+| `firepit-2400.webp`, `firepit-1200.webp` | Home quote and Experiences header | [R.D. Smith](https://unsplash.com/photos/fire-on-brown-fire-pit-xGtkdXvt4k8) |
+| `journal-banner-2400.webp`, `journal-banner-1200.webp` | Journal header | [Prasongsom Punyauppa-path](https://unsplash.com/photos/a-group-of-clay-pots-sitting-next-to-each-other-tByMZdZHMNA) |
 
 ## Before launch
 
 - [x] Michelle's portrait (`images/meet-michelle-*.webp`)
-- [ ] Replace the rest of the photography with Cubo's own: the stock photos listed under Photo credits
-- [ ] Confirm whether `journal-banner-*.webp` is Cubo's own photo, and credit it under Photo credits if not
+- [x] Replace the food, event and people photography with Cubo's own (the stock photos under Photo credits are only for nature and texture)
 - [ ] Get permission from recognisable guests in the Wilderness Feasts, Events and Gallery photos
 - [ ] Have Michelle confirm the dish names, gallery captions and image descriptions, plus "Three small bites" on the sample menu
 - [x] Replace the placeholder sample menu dishes with a real menu
-- [ ] Add a photo to the first Journal post (marked `<!-- EDIT -->` in `things-that-inspire-the-way-we-cook.html`)
+- [ ] Add photos to the first Journal post (the `intro-*`, `lume*` and `what-connect-*` files in `images/` are waiting; marked `<!-- EDIT -->` in `things-that-inspire-the-way-we-cook.html`)
 - [x] Add Michelle's background to "Meet Michelle" on the About page: where Michelle trained or cooked, for how long, and what led to this food (two or three sentences)
 - [x] Connect the enquiry form to a real service (Web3Forms)
 - [x] Review the Privacy page (`privacy.html`) and confirm it matches how Cubo handles enquiries
 - [x] Confirm the email address and Instagram handles (pricing stays off the site)
+- [ ] Align Experiences with the services document: curated Private Dining, food-only scope note, Wilderness wording, and the four Events formats
+- [ ] Decide how guests book a seat at an open feast (the page only links to dates on Instagram)
+- [ ] Confirm "native ingredients" and "traditional knowledge" in the Wilderness Feasts description
 
 ## To do
 
@@ -145,14 +149,14 @@ Stock photos from [Unsplash](https://unsplash.com/license), free to use without 
 
 ## Domain: cuboculinary.com.au
 
-- [x] Add `robots.txt` and `sitemap.xml` (public pages only, not the Journal or 404)
+- [x] Add `robots.txt` and `sitemap.xml` (public pages only, not 404)
 - [x] Add a canonical link to every public page, using the clean URL (`/about`, not `/about.html`), since GitHub Pages serves both
 - [x] Add Open Graph and Twitter Card tags, with a 1200×630 preview image (`images/share-1200x630.jpg`)
 - [x] Add structured data (JSON-LD) on the home page: business, Michelle as chef and owner, Melbourne and Victoria service area, email, both Instagram accounts
 - [x] Use full URLs in `llms.txt`
 - [x] Point the domain at GitHub Pages in Namecheap (Advanced DNS, Namecheap BasicDNS nameservers): A records for `cuboculinary.com.au` to 185.199.108.153, 185.199.109.153, 185.199.110.153 and 185.199.111.153, and a CNAME for `www` to `cubo-culinary.github.io`
 - [ ] Verify the domain on GitHub (account or organisation Settings → Pages → Add a domain, then add the TXT record it gives in Namecheap), so no one else can attach it to their own GitHub Pages site
-- [ ] Once `dig cuboculinary.com.au +short` shows those four addresses, add a `CNAME` file at the root containing `cuboculinary.com.au` and push. Not before: GitHub then redirects cubo-culinary.github.io to the domain, so a domain that does not resolve yet takes the site offline
+- [ ] DNS now shows those four addresses, so once the domain is verified, add a `CNAME` file at the root containing `cuboculinary.com.au` and push. Not before: GitHub then redirects cubo-culinary.github.io to the domain, so a domain that does not resolve yet takes the site offline
 - [ ] In the repository's Settings → Pages, enter `cuboculinary.com.au` as the custom domain and turn on Enforce HTTPS once it is offered
 - [ ] Once live, submit `https://cuboculinary.com.au/sitemap.xml` in Google Search Console and check a share preview (for example by pasting a link into a message)
 - [ ] When a page's title or description changes, update its `og:title` / `og:description` too; new public pages need a canonical link, the social tags and a line in `sitemap.xml`
